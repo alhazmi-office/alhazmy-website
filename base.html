@@ -1,0 +1,4 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{% block title %}مكتب الحزمي{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"></head><body>
+<header><div class="wrap nav"><a class="brand" href="/"><img src="{{ url_for('static',filename='logo.jpg') }}"><span>مكتب الحزمي<small>لتحضير التوفل والآيلتس</small></span></a><nav><a href="/#courses">الدورات</a><a href="/#register">التسجيل</a><a href="/#schedule">الجدول</a><a href="/admin">الإدارة</a></nav></div></header>
+{% with messages=get_flashed_messages(with_categories=true) %}{% if messages %}<div class="wrap flashes">{% for cat,msg in messages %}<div class="flash {{cat}}">{{msg}}</div>{% endfor %}</div>{% endif %}{% endwith %}
+{% block content %}{% endblock %}<footer>مكتب الحزمي لتحضير TOEFL &amp; IELTS — معك نحو مستقبلك الأفضل</footer></body></html>
